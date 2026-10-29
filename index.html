@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Souffle — Freediving School, Mauritius</title>
+  <meta name="description" content="Freediving courses on the west coast of Mauritius, from your first breath-hold to 40 metres.">
+  <meta property="og:title" content="Souffle — Freediving School, Mauritius">
+  <meta property="og:description" content="One breath. Then the blue. Freediving courses in Mauritius.">
+  <meta property="og:image" content="poster.webp">
+  <meta name="theme-color" content="#06224A">
+  <link rel="preload" as="image" href="frames/f_0001.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#courses">Skip to courses</a>
+
+  <header class="bar">
+    <a class="logo" href="#top" aria-label="Souffle, back to top">Souffle</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#courses">Courses</a>
+      <a href="#ocean">Our ocean</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn--small" href="#contact">Book a dive</a>
+  </header>
+
+  <!-- ===== SCROLL DESCENT ===== -->
+  <section class="descent" id="top" aria-label="A dive from the surface to 40 metres">
+    <div class="stage">
+      <canvas id="sea" aria-hidden="true"></canvas>
+      <div class="scrim" aria-hidden="true"></div>
+
+      <!-- Depth gauge: the readout follows the scroll -->
+      <div class="gauge" aria-hidden="true">
+        <div class="gauge__track">
+          <span style="--d:0">0</span><span style="--d:.25">10</span><span style="--d:.5">20</span><span style="--d:.75">30</span><span style="--d:1">40</span>
+          <i class="gauge__fill"></i>
+        </div>
+        <div class="gauge__readout"><b id="depth">0</b> m</div>
+      </div>
+
+      <!-- Text stations. data-from / data-to = scroll progress 0…1 -->
+      <div class="station is-hero" data-from="0" data-to="0.11">
+        <h1>One breath.<br>Then the blue.</h1>
+        <p>A freediving school on the west coast of Mauritius. We teach calm breath-holds, clean technique and safe dives, from your first metre to forty.</p>
+        <div class="actions">
+          <a class="btn" href="#contact">Book a trial dive</a>
+          <a class="link" href="#courses">See courses</a>
+        </div>
+      </div>
+
+      <div class="station" data-from="0.15" data-to="0.31">
+        <p class="depth-tag">10 m</p>
+        <h2>The giants pass at ten metres</h2>
+        <p>Sperm whales live off our coast all year. From July to October, humpbacks come to calve. We swim with them quietly, on one breath, at a respectful distance.</p>
+      </div>
+
+      <div class="station" data-from="0.38" data-to="0.56">
+        <p class="depth-tag">20 m</p>
+        <h2>The reef wall at twenty</h2>
+        <p>Green and hawksbill turtles rest on the slope. At this depth you learn to equalise, relax your shoulders and let the water carry you.</p>
+      </div>
+
+      <div class="station" data-from="0.62" data-to="0.79">
+        <p class="depth-tag">30 m</p>
+        <h2>Calm inside the shoal</h2>
+        <p>Jacks circle in thousands. Your heart slows, your mind gets quiet. This is what training is for: feeling at home where most people feel rushed.</p>
+      </div>
+
+      <div class="station is-last" data-from="0.87" data-to="1.01">
+        <p class="depth-tag">40 m</p>
+        <h2>Forty metres of silence</h2>
+        <p>Here the only light is your own. We'll get you here step by step, with a buddy and a safety line on every dive.</p>
+        <div class="actions">
+          <a class="btn" href="#courses">Choose your course</a>
+        </div>
+      </div>
+
+      <p class="hint" aria-hidden="true">Scroll to dive</p>
+      <div class="loader" aria-hidden="true"><i id="loadbar"></i></div>
+    </div>
+  </section>
+
+  <!-- ===== COURSES ===== -->
+  <section class="courses" id="courses">
+    <div class="wrap">
+      <h2 class="section-title">Courses, by depth</h2>
+      <p class="lead">Every course mixes pool or lagoon work with open-water dives. Groups of up to four per instructor.</p>
+
+      <ol class="ladder">
+        <li>
+          <div class="ladder__depth"><b>5</b> m</div>
+          <div class="ladder__body">
+            <h3>Discover freediving</h3>
+            <p>Half a day. Breathing, relaxation and your first dives in the lagoon. No experience needed, just comfort in the water.</p>
+          </div>
+          <div class="ladder__meta">½ day<br><span>from €90</span></div>
+        </li>
+        <li>
+          <div class="ladder__depth"><b>20</b> m</div>
+          <div class="ladder__body">
+            <h3>Level 1</h3>
+            <p>Two days. Duck dives, equalisation, safety and rescue. Ends with an international certificate.</p>
+          </div>
+          <div class="ladder__meta">2 days<br><span>from €320</span></div>
+        </li>
+        <li>
+          <div class="ladder__depth"><b>30</b> m</div>
+          <div class="ladder__body">
+            <h3>Level 2</h3>
+            <p>Three days. Free-fall, mouthfill basics, CO₂ and O₂ tables, training plans you can take home.</p>
+          </div>
+          <div class="ladder__meta">3 days<br><span>from €450</span></div>
+        </li>
+        <li>
+          <div class="ladder__depth"><b>40</b> m</div>
+          <div class="ladder__body">
+            <h3>Deep week</h3>
+            <p>Five days of coached deep sessions on the line for certified divers, plus video analysis of every dive.</p>
+          </div>
+          <div class="ladder__meta">5 days<br><span>from €690</span></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== OCEAN / SEASONS ===== -->
+  <section class="ocean" id="ocean">
+    <div class="wrap ocean__grid">
+      <div>
+        <h2 class="section-title">Our ocean</h2>
+        <p class="lead">We dive from Tamarin Bay. Deep water starts a short boat ride from the beach, and the visibility often goes past 30 metres.</p>
+      </div>
+      <dl class="seasons">
+        <div><dt>Sperm whales</dt><dd>All year</dd></div>
+        <div><dt>Humpback whales</dt><dd>July – October</dd></div>
+        <div><dt>Spinner dolphins</dt><dd>Most mornings</dd></div>
+        <div><dt>Turtles</dt><dd>All year</dd></div>
+        <div><dt>Water temperature</dt><dd>23–28 °C</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2 class="section-title">Take the first breath with us</h2>
+      <p class="lead">Tell us your dates and how comfortable you are in the water. We'll reply within a day.</p>
+      <div class="actions">
+        <a class="btn" href="https://wa.me/23000000000" target="_blank" rel="noopener">Write on WhatsApp</a>
+        <a class="link" href="mailto:hello@souffle.mu">hello@souffle.mu</a>
+      </div>
+      <p class="address">Tamarin Bay, Black River, Mauritius</p>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <span>© Souffle Freediving</span>
+    <span>Portfolio concept. Video generated with AI.</span>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
