@@ -112,6 +112,7 @@
       if (img) { draw(img); lastFrame = targetFrame; needsDraw = false; }
     }
 
+    window.__souffleDepth = p; // read by ambient.js
     const metres = p * MAX_DEPTH;
     depthEl.textContent = Math.round(metres);
     fill.style.transform = `scaleY(${p})`;

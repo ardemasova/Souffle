@@ -65,7 +65,8 @@ a { color: inherit; }
 /* ===== Descent (scroll sequence) ===== */
 .descent { position: relative; height: 700vh; background: var(--navy); }
 .stage { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; }
-#sea { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+#sea, #ambient { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+#ambient { pointer-events: none; }
 
 /* left-side shade so the text stays readable over the video */
 .scrim {
